@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Task Board</title>
+  </head>
+  <body>
+    <!-- not going to make it accessible -->
+
+    <main>
+      <!-- * this will be the side bar -->
+      <aside>
+        <!-- ? toogle action button -->
+        <a href="#"
+          ><img src="./icons/toggle-expanded.png" alt="toggle collaps"
+        /></a>
+        <!-- * top section of the side bar -->
+        <div>
+          <!-- ?icons -->
+          <ul id="sidebar-icon-list">
+            <li class="sidebar-icons">
+              <a href="#"><img src="./icons/logo.png" alt="logo" /></a>
+            </li>
+            <li class="sidebar-icons">
+              <a href="#"
+                ><img src="./icons/user_icon.png" alt="user icon"
+              /></a>
+            </li>
+            <li class="sidebar-icons">
+              <a href="#"
+                ><img src="./icons/dashboard.png" alt="dashboard"
+              /></a>
+            </li>
+          </ul>
+
+          <!-- ? texts -->
+          <ul id="sidebar-text">
+            <li class="sidebar-texts sidebar-heading">
+              <a href="#">Healthify</a>
+            </li>
+            <li class="sidebar-texts"><a href="#">Samuel K.</a></li>
+            <li class="sidebar-texts"><a href="#">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- * middle section of the sidebar -->
+        <div>
+          <!-- ? icons -->
+          <ul id="sidebar-icon-list">
+            <li class="sidebar-icons">
+              <a href="#"><img src="./icons/home.png" alt="home icon" /></a>
+            </li>
+            <li class="sidebar-icons">
+              <a href="#"><img src="./icons/inbox.png" alt="inbox icon" /></a>
+            </li>
+            <li class="sidebar-icons">
+              <a href="#"
+                ><img src="./icons/analytics.png" alt="analytivs"
+              /></a>
+            </li>
+            <li class="sidebar-icons">
+              <a href="#"><img src="./icons/activiy.png" alt="activity" /></a>
+            </li>
+            <li class="sidebar-icons">
+              <a href="#"
+                ><img src="./icons/updates.png" alt="see updates"
+              /></a>
+            </li>
+          </ul>
+
+          <!-- ? texts -->
+          <ul id="sidebar-text">
+            <li class="sidebar-texts"><a href="#">Home</a></li>
+            <li class="sidebar-texts"><a href="#">Inbox</a></li>
+            <li class="sidebar-texts"><a href="#">Analytics</a></li>
+            <li class="sidebar-texts"><a href="#">Activity</a></li>
+            <li class="sidebar-texts"><a href="#">Updates</a></li>
+          </ul>
+        </div>
+
+        <!-- * * bottom parts of sidebar -->
+        <div>
+          <ul id="sidebar-icon-list">
+            <li class="sidebar-icons">
+              <a href="#"><img src="./icons/settings.png" alt="settings" /></a>
+            </li>
+          </ul>
+          <ul id="sidebar-text">
+            <li class="sidebar-texts"><a href="#">Settings</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ! large body section -->
+      <section>
+        <!-- * navbar section -->
+        <nav>
+          <!-- ? logo section -->
+          <div class="p">Task Board</div>
+
+          <!-- ? search group section -->
+          <div>
+            <div class="search-group">
+              <i class="fa fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search Tasks" />
+            </div>
+            <div class="voice-input">
+              <i class="fa fa-microphone"></i>
+            </div>
+          </div>
+
+          <!-- ? icons group -->
+          <div class="icons-group">
+            <img src="./imges/top-icons.png" alt="add user icon" />
+          </div>
+        </nav>
+
+        <!-- * body section -->
+        <main>
+          <div class="content-block" id="content-rows">
+            <div class="indicator-group">
+              <div class="indicator-circle"></div>
+              <p class="indicator-text">Backlog Tasks</p>
+            </div>
+            <div class="cards-container"></div>
+          </div>
+          <div class="content-block" id="content-rows">
+            <div class="indicator-group">
+              <div class="indicator-circle"></div>
+              <p class="indicator-text">To Do Tasks</p>
+            </div>
+            <div class="cards-container"></div>
+          </div>
+          <div class="content-block" id="content-rows">
+            <div class="indicator-group">
+              <div class="indicator-circle"></div>
+              <p class="indicator-text">In Process</p>
+            </div>
+            <div class="cards-container"></div>
+          </div>
+          <div class="content-block" id="content-rows">
+            <div class="indicator-group">
+              <div class="indicator-circle"></div>
+              <p class="indicator-text">Done</p>
+            </div>
+            <div class="cards-container"></div>
+          </div>
+        </main>
+      </section>
+    </main>
+  </body>
+</html>

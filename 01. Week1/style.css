@@ -1,0 +1,261 @@
+:root {
+  /* ? space variable */
+
+  --space-4: 0.25rem;
+  --space-6: 0.375rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-32: 2rem;
+  --space-64: 4rem;
+  --space-128: 8rem;
+
+  /* * letter spacing */
+
+  --ls-positive-small: 0.003em;
+  --ls-negitive-small: -0.022em;
+
+  /* ? font family */
+
+  --ff-heading: "Poppins", helvetica;
+  --ff-sub-heading: "Poppins", helvetica;
+  --ff-regular: "Poppins", helvetica;
+
+  /* * font properties - weight */
+
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+  --fw-light: 300;
+
+  /* * font properties - size */
+
+  --fs-largest: 3.3125rem;
+  --fs-large: 1.375rem;
+  --fs-medium: 1.125rem;
+  --fs-small: 0.875rem;
+  --fs-smallest: 0.6875rem;
+
+  /* ? color properties */
+
+  /* * logo color pallets */
+
+  --blue-900: rgba(98, 0, 238, 1);
+  --blue-800: rgba(98, 0, 238, 0.8);
+  --blue-500: rgba(98, 0, 238, 0.5);
+  --blue-300: rgba(98, 0, 238, 0.3);
+
+  --white: rgba(255, 255, 255, 1);
+
+  /* * light blue pallets */
+
+  --sky-600: rgba(221, 229, 234, 1);
+  --sky-300: rgba(240, 243, 245, 1);
+
+  /* * bullet points color */
+
+  --blue-dark: rgba(11, 3, 61, 1);
+  --yellow: rgba(255, 245, 0, 1);
+  --green: rgba(20, 255, 0, 1);
+
+  /* * shadow black */
+
+  --shadow-black: rgba(0, 0, 0, 0.15);
+}
+
+/* ! reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ! general reseting */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* layout */
+
+body {
+  background-color: var(--sky-300);
+  font-family: var(--ff-heading);
+}
+
+body > main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-16);
+
+  padding: var(--space-32) var(--space-16);
+}
+
+aside {
+  grid-column: 1/ 2;
+  position: relative;
+  padding: calc(var(--space-32) + var(--space-6)) 0;
+
+  display: grid;
+  grid-template-columns: 16px 1fr 16px;
+  grid-template-rows: 200px 1fr 60px;
+
+  background-color: var(--white);
+  border-radius: 20px;
+
+  filter: drop-shadow(5px 5px 10px var(--shadow-black));
+
+  width: max-content;
+}
+
+aside > * {
+  grid-column: 2 / 3;
+}
+
+main > section {
+  grid-column: 2 / 12;
+}
+
+/* ! aside */
+
+aside > a {
+  position: absolute;
+  right: -26px;
+  top: 6%;
+}
+
+aside > div > ul > li {
+  height: 40px;
+}
+
+aside > div {
+  display: flex;
+  gap: var(--space-32);
+}
+
+aside > div > ul {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  gap: calc(var(--space-16) + var(--space-8));
+  align-content: center;
+  padding-top: var(--space-16);
+}
+
+aside > div:first-of-type {
+  border-bottom: 1px solid var(--shadow-black);
+}
+
+#sidebar-icon-list {
+  align-items: center;
+}
+
+.sidebar-icons,
+.sidebar-texts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#sidebar-text {
+  /* * aside font properties */
+
+  font: normal var(--fw-regular) var(--fs-large) var(--ff-heading);
+  color: var(--blue-900);
+}
+
+aside > div:not(:first-of-type) > #sidebar-text {
+  font-size: var(--fs-medium);
+}
+
+.sidebar-heading {
+  font: normal var(--fw-bold) var(--fs-large) var(--ff-heading);
+}
